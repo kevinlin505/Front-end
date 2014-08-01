@@ -1,1 +1,7 @@
 @import "base.css";
+
+.pageHeader{
+    width: 100%;
+    height: 90px;
+    color: #fff9df;
+}
