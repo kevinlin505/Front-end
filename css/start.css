@@ -6,4 +6,29 @@
     height: 60px;
     padding: 0;
     margin: 0;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 2;
+}
+
+.pageHeader img{
+    margin: 0 20px;
+}
+
+.pageMainContent{
+    padding-top: 60px;
+}
+
+.pageMainContent .carousel{
+    height: 500px;
+    overflow-y: hidden;
+}
+
+.pageMainContent .startButton{
+    top: 280px;
+    left: 43%;
+    background-color: rgba(255, 255, 255, .5);
+    width: 200px;
+    padding: 6px 12px 6px 24px;
+    position: absolute;
 }
