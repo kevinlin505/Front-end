@@ -11,8 +11,32 @@
     z-index: 2;
 }
 
-.pageHeader img{
-    margin: 0 20px;
+.pageHeader .navbar-brand{
+    font-size: 35px;
+    margin: 5px;
+}
+
+.pageHeader .navbar-brand .slogan{
+    font-size: 12px;
+    display: inline;
+}
+
+.pageHeader .headerTabs{
+    display: inline-block;
+}
+
+.pageHeader ul{
+    margin: 15px;
+}
+
+.pageHeader li{
+    list-style-type: none;
+    display: inline;
+    padding: 0 15px;
+}
+
+.pageHeader li a{
+    font-size: 24px;
 }
 
 .pageMainContent{
@@ -20,15 +44,6 @@
 }
 
 .pageMainContent .carousel{
-    height: 500px;
+    height: 550px;
     overflow-y: hidden;
-}
-
-.pageMainContent .startButton{
-    top: 280px;
-    left: 43%;
-    background-color: rgba(255, 255, 255, .5);
-    width: 200px;
-    padding: 6px 12px 6px 24px;
-    position: absolute;
 }
