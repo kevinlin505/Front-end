@@ -9,6 +9,9 @@
     background-color: #ffffff;
     position: fixed;
     z-index: 2;
+    -webkit-box-shadow: 0 6px 6px -1px #5a5a5a;
+    -moz-box-shadow: 0 6px 6px -1px #5a5a5a;
+    box-shadow: 0 6px 6px -1px #5a5a5a;
 }
 
 .pageHeader .headerContainer{
@@ -41,7 +44,6 @@
 }
 
 .pageHeader li a:hover{
-    font-size: 24px;
     text-decoration: none;
     color: #8AC007;
 }
