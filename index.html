@@ -6,31 +6,34 @@
 </head>
 <body>
 	<div class="pageHeader page-header">
-		<!--<img src="img/Logo.png" alt="Logo" title="Traveling Stops" class="logo" width="116" height="100"/>-->
-        <div class="navbar-brand">
-            EliWay
-            <div class="slogan"><i>Shape the best talents!</i></div>
-        </div>
-        <div class="headerTabs">
-            <ul>
-                <li class="">
-                    <a href="#">One</a>
-                </li>
-                <li class="">
-                    <a href="#">Two</a>
-                </li>
-                <li class="">
-                    <a href="#">Three</a>
-                </li>
-                <li class="">
-                    <a href="#">Four</a>
-                </li>
-            </ul>
+        <div class="headerContainer">
+            <div class="navbar-brand">
+                <img src="img/brand.jpg" alt="Logo" title="Elite Way"/>
+            </div>
+            <div class="headerTabs">
+                <ul>
+                    <li class="">
+                        <a href="#">Why EliWay</a>
+                    </li>
+                    <li class="">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Solutions</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Clients</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 	</div>
 	<div class="pageMainContent">
         <div ng-app="carouselApp" ng-controller="homeCarousel">
-            <div>
+            <div id="carouselPosition">
                 <carousel class="carousel" interval="myInterval">
                     <slide ng-repeat="slide in slides" active="slide.active">
                         <img class="carousel-inner" ng-src="{{slide.image}}">
@@ -41,8 +44,52 @@
                 </carousel>
             </div>
         </div>
+        <div class="productMemo">
+            <div class="memoContainer">
+                <div class="memoSection">
+                    <img src="img/education.png" alt="education">
+                    <h3>Education</h3>
+                    <div>
+                        Donec sed odio dui. Etiam porta sem malesuada
+                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
+                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                        Praesent commodo cursus magna.
+                    </div>
+                </div>
+                <div class="memoSection">
+                    <img src="img/engagement.jpg" alt="interaction">
+                    <h3>Interation</h3>
+                    <div>
+                        Donec sed odio dui. Etiam porta sem malesuada
+                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
+                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                        Praesent commodo cursus magna.
+                    </div>
+                </div>
+                <div class="memoSection">
+                    <img src="img/success.jpg" alt="success">
+                    <h3>Success</h3>
+                    <div>
+                        Donec sed odio dui. Etiam porta sem malesuada
+                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
+                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                        Praesent commodo cursus magna.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-	<div class="pageFooter"></div>
+    <hr>
+	<div class="pageFooter">
+        <div class="footerContainer">
+            <div class="legals">
+                &#169; 2014 EliWay, Inc. <a href="#">Privacy</a> | <a href="#">Terms</a>
+            </div>
+            <div class="navigation">
+                <a href="#carouselPosition">Back to top</a>
+            </div>
+        </div>
+	</div>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
     <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
     <script src="js/carousel.js"></script>
