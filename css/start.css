@@ -58,7 +58,6 @@
 }
 
 .pageMainContent .memoContainer{
-    width: 1100px;
     height: 372px;
     padding: 14px;
     margin: 0 auto;
@@ -80,6 +79,34 @@
     -moz-box-shadow:    inset 0 0 10px #5a5a5a;
     -webkit-box-shadow: inset 0 0 10px #5a5a5a;
     box-shadow: inset 0 0 10px #5a5a5a;
+}
+
+.pageMainContent .missionImg{
+    float: right;
+    margin: 0 25px;
+}
+
+.pageMainContent .missionStatement{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    margin: 0 0 0 25px;
+}
+
+.pageMainContent .solutionImg{
+    float: left;
+    padding: 20px;
+    margin: 0 0 0 25px;
+}
+
+.pageMainContent .solutionStatement{
+    float: right;
+    width: 40%;
+}
+
+.pageMainContent .contentWidth{
+    width: 1100px;
+    margin: 0 auto;
 }
 
 .pageFooter{
