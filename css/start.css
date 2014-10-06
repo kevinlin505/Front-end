@@ -104,6 +104,24 @@
     width: 40%;
 }
 
+.pageMainContent .mobileImg{
+    float: right;
+    margin: 0 75px 0 0;
+    padding: 0 0 30px;
+}
+
+.pageMainContent .mobileImg img{
+    width: 400px;
+    height: 325px;
+}
+
+.pageMainContent .mobileStatement{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    margin: 0 25px;
+}
+
 .pageMainContent .contentWidth{
     width: 1100px;
     margin: 0 auto;

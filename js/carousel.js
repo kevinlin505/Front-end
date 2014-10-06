@@ -8,8 +8,5 @@ carouselApp.controller('homeCarousel',function($scope) {
         {image: 'img/ace.jpg', name: 'ace'},
         {image: 'img/tutor.jpg', name: 'tutor'},
         {image: 'img/blackboard.jpg', name: 'blackboard'},
-        {image: 'img/homework.jpg', name: 'homework'},
-        {image: 'img/course.jpg', name:'course'},
-        {image: 'img/books.png', name: 'books'},
         {image: 'img/kids.jpg', name: 'kids'}];
 });
