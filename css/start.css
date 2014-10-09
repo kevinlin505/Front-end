@@ -149,6 +149,10 @@ body .lastHR{
         background-color: #8F8F8F;
     }
 
+    .pageHeader li a{
+        color: #fff;
+    }
+}
     .pageHeader li a:hover{
         background-color: transparent;
     }
