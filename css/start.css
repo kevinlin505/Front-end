@@ -124,3 +124,23 @@ body .lastHR{
     text-align: right;
 }
 
+/*****************************Custom Media Queries***************************/
+
+@media (max-width: 1280px){
+    .pageHeader li a{
+        font-size: 24px;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 1024px){
+    .pageHeader li a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px){
+    .pageHeader li{
+        background-color: #8F8F8F;
+    }
+}
