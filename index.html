@@ -6,13 +6,21 @@
 </head>
 <body>
     <div ng-app="myApp" scroll ng-class="{headerChange:isChange}">
-        <div class="pageHeader page-header headerChange">
-            <div class="headerContainer">
-                <div class="navbar-brand">
-                    <img src="img/brand.jpg" alt="Logo" title="Elite Way"/>
+        <div class="pageHeader headerChange navbar" role="navigation">
+            <div class="headerContainer container">
+                <div class="navbar-header">
+                    <div class="navbar-brand" id="brand">
+                        <img src="img/eliway.png">
+                    </div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerTabs">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <div class="headerTabs">
-                    <ul>
+                <div class="headerTabs navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
                         <li class="">
                             <a href="#missionNavigation">Our Mission</a>
                         </li>
@@ -46,28 +54,28 @@
                 </carousel>
             </div>
         </div>-->
-        <div class="videoWrapper">
-            <video autoplay muted loop>
-                <source src="video/bridge.mp4" type="video/mp4">
-            </video>
+        <div class="homeImg" id="top">
+            <img src="img/nycBW.jpg">
         </div>
-        <div class="productMemo">
-            <div class="contentWidth memoContainer">
-                <div class="memoSection">
+        <div class="productMemo container">
+            <div class="memoContainer row">
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
                     <img src="img/brand.png" alt="brand">
                     <h2>Brand Awarenessm</h2>
                     <div>
                         We help you establish your online presence with a personalized website that sets you apart from others.
                     </div>
                 </div>
-                <div class="memoSection">
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
                     <img src="img/management.png" alt="management">
                     <h2>School Management</h2>
                     <div>
                         No more messy record keeping. We help you manage efficiently, so you can focus on education.
                     </div>
                 </div>
-                <div class="memoSection">
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
                     <img src="img/data.png" alt="data">
                     <h2>Advanced Data Analytics</h2>
                     <div>
@@ -76,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="memoSection">
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
                     <img src="img/conn.png" alt="social">
                     <h2>School Social Platform</h2>
                     <div>
@@ -86,64 +94,98 @@
             </div>
         </div>
         <hr/>
-        <div class="contentWidth missionContent">
-            <div class="missionStatement" id="missionNavigation">
-                <h2>Our Mission</h2>
-                <div>EliWay aims to provide the best platform solution for tutoring schools to
-                    establish connection with students that fosters their academic growth.
-                    Our easy to use platform inspires student, parent and teacher discussion,
-                    making sure that students are on track to achieve their academic goals.</div>
-            </div>
-            <div class="missionImg">
-                <img src="img/mission.jpg" alt="mission">
-            </div>
-        </div>
-        <hr/>
-        <div class="contentWidth solutionContent" id="solutionNavigation">
-            <div class="solutionImg">
-                <img src="img/solution.jpg" alt="solution">
-            </div>
-            <div class="solutionStatement">
-                <h2>Our Solution</h2>
-                <div>
-                    <ul>
-                        <li>EliWay Management System</li>
-                        <li>Social Network</li>
-                        <li>Data Analysis</li>
-                        <li>Mobile</li>
-                    </ul>
-                    These are the solutions that we promise to our customers.
+        <div class="missionContent container">
+            <div class="row">
+                <div class="statement col-xs-12 col-md-6" id="missionNavigation">
+                    <h2>Our Mission</h2>
+                    <div>EliWay aims to provide the best platform solution for tutoring schools to
+                        establish connection with students that fosters their academic growth.
+                        Our easy to use platform inspires student, parent and teacher discussion,
+                        making sure that students are on track to achieve their academic goals.</div>
+                </div>
+                <div class="statement col-xs-12 col-md-6">
+                    <img src="img/mission.png" alt="mission" width="270" >
                 </div>
             </div>
         </div>
         <hr/>
-        <div class="contentWidth mobileContent">
-            <div class="mobileStatement" id="mobileNavigation">
-                <h2>EliWay Mobile</h2>
-                <div>IOS, Android
-                    chat with teacher in real-time
-                    integrate with social network
-                    get status report</div>
+        <div class="solutionContent container" id="solutionNavigation">
+            <div class="row">
+                <div class="statement col-xs-12 col-md-6">
+                    <img src="img/solution.jpg" alt="solution" width="270">
+                </div>
+                <div class="statement col-xs-12 col-md-6">
+                    <h2>Our Solution</h2>
+                    <div>
+                        <ul>
+                            <li>Brand Awareness</li>
+                            <li>Eliway Management System</li>
+                            <li>School Social Platform</li>
+                            <li>Advance Data Analytics</li>
+                        </ul>
+                        These are the solutions that we promise to our customers.
+                    </div>
+                </div>
             </div>
-            <div class="mobileImg">
-                <img src="img/mobile.png" alt="mobile">
+        </div>
+        <hr/>
+        <div class="container mobileContent">
+            <div class="row">
+                <div class="statement col-xs-12 col-md-6" id="mobileNavigation">
+                    <h2>EliWay Mobile</h2>
+                    <div>IOS, Android
+                        chat with teacher in real-time
+                        integrate with social network
+                        get status report</div>
+                </div>
+                <div class="statement col-xs-12 col-md-6">
+                    <img src="img/mobile.png" alt="mobile" width="270">
+                </div>
             </div>
         </div>
     </div>
-    <hr/>
-	<div class="pageFooter">
-        <div class="footerContainer" id="contactNavigation">
-            <div class="legals">
-                &#169; 2014 EliWay, Inc. <a href="#">Privacy</a> | <a href="#">Terms</a>
+    <hr class="lastHR"/>
+    <div class="glossary">
+        <div class="container">
+            <div class="row">
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                        <div><a>About Us</a></div>
+                        <div><a>Our Mission</a></div>
+                        <div><a>Our Solution</a></div>
+                        <div><a>EliWay Membership</a></div>
+                </div>
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                    Contact:
+                    <div>
+                        Phone: 888-8EliWay
+                    </div>
+                </div>
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                    Location
+                </div>
             </div>
-            <div class="navigation">
-                <a href="#carouselPosition">Back to top</a>
+        </div>
+        <div class="glossaryBottom">
+            <img src="img/greyLogo.png" alt="logo">
+            <div>123 456 Street, New York N.Y 10000</div>
+        </div>
+    </div>
+	<div class="pageFooter">
+        <div class="footerContainer container" id="contactNavigation">
+            <div class="row">
+                <div class="legals col-xs-12 col-md-4">
+                    &#169; 2014 EliWay, Inc.
+                </div>
+                <div class="privacy col-xs-12 col-md-4"><a href="#">Privacy</a> | <a href="#">Terms</a></div>
+                <div class="navigation col-xs-12 col-md-4">
+                    <a href="#top">Back to top</a>
+                </div>
             </div>
         </div>
 	</div>
     <script src="util/angular.min.js"></script>
-    <script src="util/ui-bootstrap-tpls-0.11.0.min.js"></script>
-    <script src="util/carousel.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="util/main.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
