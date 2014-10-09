@@ -137,6 +137,10 @@ body .lastHR{
     .pageHeader li a{
         font-size: 18px;
     }
+
+    .pageMainContent .homeImg img{
+        height: 100%;
+    }
 }
 
 @media (max-width: 768px){
