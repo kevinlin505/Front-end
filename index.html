@@ -5,34 +5,36 @@
 	<link rel="stylesheet" href="css/start.css"/>
 </head>
 <body>
-	<div class="pageHeader page-header">
-        <div class="headerContainer">
-            <div class="navbar-brand">
-                <img src="img/brand.jpg" alt="Logo" title="Elite Way"/>
-            </div>
-            <div class="headerTabs">
-                <ul>
-                    <li class="">
-                        <a href="#missionNavigation">Our Mission</a>
-                    </li>
-                    <li class="">
-                        <a href="#solutionNavigation">Solutions</a>
-                    </li>
-                    <li class="">
-                        <a href="#mobileNavigation">Mobile</a>
-                    </li>
-                    <li class="">
-                        <a href="#">About Us</a>
-                    </li>
-                    <li class="">
-                        <a href="#contactNavigation">Contact</a>
-                    </li>
-                </ul>
+    <div ng-app="myApp" scroll ng-class="{headerChange:isChange}">
+        <div class="pageHeader page-header headerChange">
+            <div class="headerContainer">
+                <div class="navbar-brand">
+                    <img src="img/brand.jpg" alt="Logo" title="Elite Way"/>
+                </div>
+                <div class="headerTabs">
+                    <ul>
+                        <li class="">
+                            <a href="#missionNavigation">Our Mission</a>
+                        </li>
+                        <li class="">
+                            <a href="#solutionNavigation">Solutions</a>
+                        </li>
+                        <li class="">
+                            <a href="#mobileNavigation">Mobile</a>
+                        </li>
+                        <li class="">
+                            <a href="#">About Us</a>
+                        </li>
+                        <li class="">
+                            <a href="#contactNavigation">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-	</div>
+    </div>
 	<div class="pageMainContent">
-        <div ng-app="carouselApp" ng-controller="homeCarousel">
+        <!--<div ng-app="carouselApp" ng-controller="homeCarousel">
             <div id="carouselPosition">
                 <carousel class="carousel" interval="myInterval">
                     <slide ng-repeat="slide in slides" active="slide.active">
@@ -43,37 +45,41 @@
                     </slide>
                 </carousel>
             </div>
+        </div>-->
+        <div class="videoWrapper">
+            <video autoplay muted loop>
+                <source src="video/21st%20Century%20Education.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="productMemo">
             <div class="contentWidth memoContainer">
                 <div class="memoSection">
-                    <img src="img/education.png" alt="education">
-                    <h2>Management System</h2>
+                    <img src="img/brand.png" alt="brand">
+                    <h2>Brand Awarenessm</h2>
                     <div>
-                        Donec sed odio dui. Etiam porta sem malesuada
-                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
-                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna.
+                        We help you establish your online presence with a personalized website that sets you apart from others.
                     </div>
                 </div>
                 <div class="memoSection">
-                    <img src="img/tree.png" alt="interaction">
-                    <h2>Social Network</h2>
+                    <img src="img/management.png" alt="management">
+                    <h2>School Management</h2>
                     <div>
-                        Donec sed odio dui. Etiam porta sem malesuada
-                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
-                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna.
+                        No more messy record keeping. We help you manage efficiently, so you can focus on education.
                     </div>
                 </div>
                 <div class="memoSection">
-                    <img src="img/academic.png" alt="success">
-                    <h2>Data Analysis</h2>
+                    <img src="img/social.png" alt="social">
+                    <h2>School Social Platform</h2>
                     <div>
-                        Donec sed odio dui. Etiam porta sem malesuada
-                        magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut
-                        id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna.
+                        Education opens minds. Technology connects them. We bring you the best of both, all in one place.
+                    </div>
+                </div>
+                <div class="memoSection">
+                    <img src="img/data.png" alt="data">
+                    <h2>Advanced Data Analytics</h2>
+                    <div>
+                        Understanding your student is key in helping them achieve their goals.
+                        We provide the best analytic tool for you to gauge student’s performance.
                     </div>
                 </div>
             </div>
@@ -134,10 +140,10 @@
             </div>
         </div>
 	</div>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
-    <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/start.js"></script>
+    <script src="util/angular.min.js"></script>
+    <script src="util/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="util/carousel.js"></script>
+    <script src="util/main.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->

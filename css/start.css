@@ -9,6 +9,15 @@
     background-color: #ffffff;
     position: fixed;
     z-index: 2;
+    border: none;/*
+    -webkit-box-shadow: 0 6px 6px -1px #5a5a5a;
+    -moz-box-shadow: 0 6px 6px -1px #5a5a5a;
+    box-shadow: 0 6px 6px -1px #5a5a5a;*/
+    background: transparent;
+}
+
+.headerChange .pageHeader{
+    background-color: #ffffff;
     -webkit-box-shadow: 0 6px 6px -1px #5a5a5a;
     -moz-box-shadow: 0 6px 6px -1px #5a5a5a;
     box-shadow: 0 6px 6px -1px #5a5a5a;
@@ -49,7 +58,12 @@
 }
 
 .pageMainContent{
-    padding-top: 60px;
+    /*padding-top: 60px;*/
+}
+
+.pageMainContent .videoWrapper video{
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .pageMainContent .carousel{
@@ -64,7 +78,7 @@
 }
 
 .pageMainContent .memoSection{
-    width: 33%;
+    width: 25%;
     padding: 15px;
     display: inline;
     text-align: center;
