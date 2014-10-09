@@ -121,7 +121,8 @@ body .lastHR{
 }
 
 .pageFooter .navigation{
-    text-align: right;
+    text-align: left;
+    padding: 12px;
 }
 
 /*****************************Custom Media Queries***************************/
