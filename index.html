@@ -4,13 +4,13 @@
 	<title>Welcome</title>
 	<link rel="stylesheet" href="style/css/style.css"/>
 </head>
-<body>
-    <div ng-app="myApp" scroll ng-class="{headerChange:isChange}">
+<body ng-app="myApp">
+    <header scroll ng-class="{headerChange:isChange}">
         <div class="pageHeader headerChange navbar" role="navigation">
             <div class="headerContainer container">
                 <div class="navbar-header">
                     <div class="navbar-brand" id="brand">
-                        <img src="img/eliway.png">
+                        <img src="style/img/logoText.png">
                     </div>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerTabs">
                         <span class="sr-only">Toggle Navigation</span>
@@ -43,104 +43,25 @@
                 </div>
             </div>
         </div>
-    </div>
-	<div class="pageMainContent">
+    </header>
+	<section class="pageMainContent">
         <div class="homeImg" id="top">
-            <img src="img/ASF.png">
-        </div>
-        <div class="productMemo container">
-            <div class="memoContainer row">
-                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
-                    <img src="img/brand.png" alt="brand">
-                    <h2>Brand Awareness</h2>
-                    <div>
-                        We help you establish your online presence with a personalized website that sets you apart from others.
-                    </div>
-                </div>
-                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
-                    <img src="img/management.png" alt="management">
-                    <h2>School Management</h2>
-                    <div>
-                        No more messy record keeping. We help you manage efficiently, so you can focus on education.
-                    </div>
-                </div>
-                <!-- Add the extra clearfix for only the required viewport -->
-                <div class="clearfix visible-xs-block"></div>
-                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
-                    <img src="img/data.png" alt="data">
-                    <h2>Advanced Data Analytics</h2>
-                    <div>
-                        Understanding your student is key in helping them achieve their goals.
-                        We provide the best analytic tool for you to gauge student’s performance.
-                    </div>
-                </div>
-
-                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
-                    <img src="img/conn.png" alt="social">
-                    <h2>School Social Platform</h2>
-                    <div>
-                        Education opens minds. Technology connects them. We bring you the best of both, all in one place.
-                    </div>
-                </div>
+            <div ng-controller="homeCarousel">
+                <div id="carouselPosition">
+                     <carousel class="carousel" interval="myInterval">
+                         <slide ng-repeat="slide in slides" active="slide.active">
+                             <img class="carousel-inner" ng-src="{{slide.image}}">
+                             <div class="carousel-caption">
+                                 <p>{{slide.name}}</p>
+                             </div>
+                         </slide>
+                     </carousel>
+                 </div>
             </div>
         </div>
-        <hr/>
-        <div class="missionContent container">
-            <div class="row">
-                <div class="statement col-xs-12 col-sm-6" id="missionNavigation">
-                    <h2>Our Mission</h2>
-                    <div>EliWay was founded with a vision to provide the best platform solution for schools to stay connected with students.
-                        Our user-friendly platform encourages student and teacher interaction,
-                        making sure that students are on track to achieve their academic goals.
-                    </div>
-                </div>
-                <div class="statement col-xs-12 col-sm-6">
-                    <img src="img/mission.png" alt="mission" width="270" >
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr class="lastHR"/>
-    <div class="glossary">
-        <div class="container">
-            <div class="row">
-                <div class="glossaryLinks col-xs-12 col-md-4">
-                        <div><a>About Us</a></div>
-                        <div><a>Our Mission</a></div>
-                        <div><a>Our Solution</a></div>
-                        <div><a>EliWay Membership</a></div>
-                </div>
-                <div class="glossaryLinks col-xs-12 col-md-4">
-                    Contact:
-                    <div>
-                        Phone: 888-8EliWay
-                    </div>
-                </div>
-                <div class="glossaryLinks col-xs-12 col-md-4">
-                    Location
-                </div>
-            </div>
-        </div>
-        <div class="glossaryBottom">
-            <img src="img/greyLogo.png" alt="logo">
-            <div>123 456 Street, New York N.Y 10000</div>
-        </div>
-    </div>
-	<div class="pageFooter">
-        <div class="footerContainer container" id="contactNavigation">
-            <div class="row">
-                <div class="legals col-xs-12 col-sm-3">
-                    &#169; 2014 EliWay, Inc.
-                    <div class="privacy"><a href="#">Privacy</a> | <a href="#">Terms</a></div>
-                </div>
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3"></div>
-                <div class="navigation col-xs-12 col-sm-3">
-                    <a href="#top">Back to top</a>
-                </div>
-            </div>
-        </div>
-	</div>
+    </section>
+    <footer>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
