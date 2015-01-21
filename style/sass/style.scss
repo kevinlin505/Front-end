@@ -1,0 +1,100 @@
+@import 'base';
+
+$bgColor: #FFF;
+$headerBG: #444;
+$linkColor: #FFF;
+$textWidth: 730px;
+
+header{
+	background-color: $headerBG;
+
+	.navbar{
+		margin: 0;
+	}
+
+	#brand{
+		color: #FFF;
+		font-size: 24px;
+	}
+
+	.headerContainer{
+		//width: 700px;
+	}
+
+	.headerTabs ul li a{
+		color: $linkColor;
+
+		&:hover{
+			background-color: $headerBG;
+			text-decoration: none;
+			color: #EEE;
+		}
+	}
+}
+
+.sectionStyle{
+	padding: 50px 0 70px;
+	width: $textWidth;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.pageMainContent{
+	section.heroText{
+		@extend .sectionStyle;
+
+		.slogan{
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		.heroDescription{
+			text-align: left;
+		}
+	}
+	#carouselPosition .glyphicon-chevron-right, 
+	#carouselPosition .glyphicon-chevron-left,
+	#carouselPosition .carousel-indicators{
+		display: none
+	}
+
+	section.aboutUs{
+		@extend .sectionStyle;
+		text-align: left;
+	}
+
+	section.imgDivider{
+		text-align: center;
+
+		div{
+			display: inline-block;
+			width: 24%;
+			padding: 0 2%;
+		}
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+footer{
+	background-color: $headerBG;
+	text-align: center;
+	color: #FFF;
+	ul li{
+			display: inline-block;
+			margin: 0;
+			list-style: none;
+			padding: 10px 15px 5px;
+			a{
+				color: $linkColor;
+
+				&:hover{
+					background-color: $headerBG;
+					text-decoration: none;
+					color: #EEE;
+				}
+			}
+		}
+}

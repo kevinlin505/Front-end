@@ -1,0 +1,79 @@
+html, body, ul, ol {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font: 100% "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+
+header {
+  background-color: #444;
+}
+header .navbar {
+  margin: 0;
+}
+header #brand {
+  color: #FFF;
+  font-size: 24px;
+}
+header .headerTabs ul li a {
+  color: #FFF;
+}
+header .headerTabs ul li a:hover {
+  background-color: #444;
+  text-decoration: none;
+  color: #EEE;
+}
+
+.sectionStyle, .pageMainContent section.heroText, .pageMainContent section.aboutUs {
+  padding: 50px 0 70px;
+  width: 730px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pageMainContent section.heroText .slogan {
+  font-style: italic;
+  font-weight: bold;
+}
+.pageMainContent section.heroText .heroDescription {
+  text-align: left;
+}
+.pageMainContent #carouselPosition .glyphicon-chevron-right,
+.pageMainContent #carouselPosition .glyphicon-chevron-left,
+.pageMainContent #carouselPosition .carousel-indicators {
+  display: none;
+}
+.pageMainContent section.aboutUs {
+  text-align: left;
+}
+.pageMainContent section.imgDivider {
+  text-align: center;
+}
+.pageMainContent section.imgDivider div {
+  display: inline-block;
+  width: 24%;
+  padding: 0 2%;
+}
+.pageMainContent section.imgDivider img {
+  width: 100%;
+}
+
+footer {
+  background-color: #444;
+  text-align: center;
+  color: #FFF;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 10px 15px 5px;
+}
+footer ul li a {
+  color: #FFF;
+}
+footer ul li a:hover {
+  background-color: #444;
+  text-decoration: none;
+  color: #EEE;
+}

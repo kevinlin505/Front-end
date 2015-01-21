@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome</title>
+	<title>SOHO Vascular Surgery</title>
 	<link rel="stylesheet" href="style/css/style.css"/>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-app="myApp">
     <header scroll ng-class="{headerChange:isChange}">
         <div class="pageHeader headerChange navbar" role="navigation">
-            <div class="headerContainer container">
-                <div class="navbar-header">
-                    <div class="navbar-brand" id="brand">
-                        <img src="style/img/logoText.png">
-                    </div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerTabs">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            <div class="navbar-header">
+                <div class="navbar-brand" id="brand">
+                    SOHO VASCULAR SURGERY
                 </div>
+            </div>
+            <div class="headerContainer container">
                 <div class="headerTabs navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="">
@@ -31,7 +26,10 @@
                             <a href="#">Our Services</a>
                         </li>
                         <li class="">
-                            <a href="#">Resources</a>
+                            <a href="#">Physician Resources</a>
+                        </li>
+                        <li class="">
+                            <a href="#">Patient Resources</a>
                         </li>
                         <li class="">
                             <a href="#">Why SOHO?</a>
@@ -44,26 +42,66 @@
             </div>
         </div>
     </header>
-	<section class="pageMainContent">
-        <div class="homeImg" id="top">
+	<div class="pageMainContent">
+        <section class="heroText">
+            <h3>WELCOME TO SOHO VASCULAR SURGERY</h3>
+            <h4 class="slogan">A Premiere Vascular Care Outpatient Facility</h4>
+            <div class="heroDescription">
+            SOHO Vascular Surgery is conveniently located at 123 Lafayette St in Manhattan. We are an independent vascular surgery facility. Our operating rooms are accredited by AAAASF to perform office based surgeries. We specialize in a variety of vascular care procedures including hemodialysis fistula access,maintenance and repair. Permacath insertion, replacement and removal. Laser ablation of varicose veins; as well as ultrasound vascular studies.</div>
+        </section>
+        <section class="carousel" id="top">
             <div ng-controller="homeCarousel">
                 <div id="carouselPosition">
                      <carousel class="carousel" interval="myInterval">
                          <slide ng-repeat="slide in slides" active="slide.active">
                              <img class="carousel-inner" ng-src="{{slide.image}}">
-                             <div class="carousel-caption">
+                             <!-- <div class="carousel-caption">
                                  <p>{{slide.name}}</p>
-                             </div>
+                             </div> -->
                          </slide>
                      </carousel>
                  </div>
             </div>
+        </section>
+        <section class="aboutUs">
+            <h3>OUR MISSION</h3>
+            <div>Our goal is providing an ambient, efficient and high standard outpatient service
+            for dialysis patients to reduce stress and improve life quality<div>
+
+            <h3>OUR TEAM</h3>
+            <h4>Medical Director &#38; Chief Surgeon &#8211; Feng QIn</h4>
+
+            Feng Qin, MD, is a vascular and endovascular surgeon. Trained at St Vincent&#8217;s Catholic Medical Center Manhattan,University of South Alabama and North Shore&#8211;Long Island Jewish. He is affiliated with Lenox Hill Hospital, Beth Israel Hospital and St John&#8217;s Episcopal Hospital.
+
+            <h4>Clinical Manager &#8211; Jon Mazzeo</h4>
+
+            Jon Mazzeo, BCLS, ACLS, NYSNA, CCRN, is the Clinical Manager for Soho Vascular Surgery. Jon joined SVS in 2012 and brings 40 years of outstanding clinical service with her. Jon is responsible for facilitating the needs of all of our patients during their visit to the facility. In addition, Jon manages the Soho Clinical Team which includes all medical assistants,licensed independent practitioners ,radiologic technologists and registered nurses.
+        </section>
+        <section class="imgDivider" ng-controller='imageLoader'>
+            <div ng-repeat="img in missionImgs">
+                <img ng-src="{{img}}">
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="style/img/ASF.png">
+            </div>
+        </section>
+    </div>
+    <footer ng-controller="footerCtrl">
+        <div>
+            <ul>
+                <li ng-repeat="nav in footerNavs"><a href="#">{{nav}}</a></li>
+            </ul>
         </div>
-    </section>
-    <footer>
+        <div>
+            SOHO Vascular Surgery  •  212-966-0033  •  123 Lafayette Street, 6th Floor, New York, New York 11691
+            Copyright &#169; 2015. Soho Vascular Surgery. All rights reserved.
+        </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="util/main.js"></script>
     <!--[if lt IE 9]>
