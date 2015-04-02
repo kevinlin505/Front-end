@@ -4,23 +4,16 @@
 	<title>Welcome</title>
 	<link rel="stylesheet" href="css/start.css"/>
     <script type="text/javascript">
-        $(document).ready(function(){
-            var vid = document.getElementById("homeVideo");
-            alert(vid);
-            vid.addEventListener("ended", function(){
-                alert(vid.ended);
+       function finished(dis){
+           var hImg=document.createElement("img");
+           hImg.setAttribute('src', 'img/slogan.jpg');
+           hImg.setAttribute('alt', 'nyc');
 
-                /*var parentNode = document.getElementById('top');
+           var parentNode = document.getElementById('top');
 
-                 var hImg=document.createElement("img");
-                 hImg.setAttribute('src', 'img/slogan.jpg');
-                 hImg.setAttribute('alt', 'nyc');
-
-                 alert(parentNode+" "+ hImg);
-                 parentNode.removeChild(parentNode.firstChild);
-                 parentNode.appendChild(hImg);*/
-            })
-        });
+           parentNode.removeChild(dis);
+           parentNode.appendChild(hImg);
+       }
     </script>
 </head>
 <body>
@@ -62,8 +55,8 @@
     </div>
 	<div class="pageMainContent">
         <div class="homeImg" id="top">
-            <video id="homeVideo" width="100%" height="auto" muted autoplay>
-                <source src="video/Attack.mp4">
+            <video id="homeVideo" width="100%" height="auto" muted autoplay onended="javaScript: finished(this)">
+                <source src="video/21st Century Education.mp4">
             </video>
         </div>
         <div class="productMemo container">
@@ -160,7 +153,7 @@
         </div>
 	</div>
     <script src="util/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="util/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="util/main.js"></script>
     <!--[if lt IE 9]>
