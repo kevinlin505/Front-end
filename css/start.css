@@ -1,0 +1,159 @@
+@import "base.css";
+@import "bootstrap.min.css";
+
+.pageHeader{
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    z-index: 2;
+}
+
+.pageHeader .navbar-toggle{
+    margin: 18px;
+}
+
+.pageHeader .icon-bar{
+    background-color: #00cced;
+}
+
+.headerChange .pageHeader{
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 6px 6px -1px #5a5a5a;
+    -moz-box-shadow: 0 6px 6px -1px #5a5a5a;
+    box-shadow: 0 6px 6px -1px #5a5a5a;
+    border-radius: 0;
+}
+
+.pageHeader li{
+    padding: 12px;
+}
+.pageHeader li a{
+    font-size: 24px;
+    color: #428bca;
+}
+
+.pageHeader li a:hover{
+    text-decoration: none;
+    color: #8AC007;
+}
+
+.pageMainContent .homeImg img{
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 6px 6px -1px #5a5a5a;
+    -moz-box-shadow: 0 6px 6px -1px #5a5a5a;
+    box-shadow: 0 6px 6px -1px #5a5a5a;
+}
+
+.pageMainContent .memoContainer{
+    height: 372px;
+    margin: 0 auto;
+}
+
+.pageMainContent .memoSection{
+    padding: 15px 46px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.pageMainContent .memoSection img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    -moz-box-shadow:    inset 0 0 10px #5a5a5a;
+    -webkit-box-shadow: inset 0 0 10px #5a5a5a;
+    box-shadow: inset 0 0 10px #5a5a5a;
+}
+
+.pageMainContent .statement{
+    text-align: center;
+}
+
+.pageMainContent .statement h2,.pageMainContent .statement div{
+    text-align: left;
+}
+
+.pageFooter{
+    padding: 30px 40px 30px;
+    background-color: #1e1e1e;
+}
+
+body .lastHR{
+    margin-bottom: 0 !important;
+}
+
+.glossary{
+    background-color: #282828;
+    height: 400px;
+    color: #8F8F8F;
+    text-align: center;
+    padding: 40px;
+}
+
+.glossary .glossaryBottom{
+    color: #8F8F8F;
+    width: 165px;
+    margin: 50px auto;
+}
+
+.glossary .glossaryLinks{
+    text-align: left;
+}
+
+.glossary .glossaryLinks li{
+    list-style: none;
+}
+
+.glossary .glossaryLinks a{
+    color: #8F8F8F;
+}
+
+.pageFooter .footerContainer a{
+    color: #fff;
+}
+
+.pageFooter .footerContainer div{
+    color: #fff;
+}
+
+.pageFooter .navigation{
+    text-align: left;
+    padding: 12px;
+}
+
+/*****************************Custom Media Queries***************************/
+
+@media (max-width: 1280px){
+    .pageHeader li a{
+        font-size: 24px;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 1024px){
+    .pageHeader li a{
+        font-size: 16px;
+    }
+
+    .pageMainContent .homeImg img{
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .pageHeader li{
+        background-color: #8F8F8F;
+    }
+
+    .pageHeader li a{
+        color: #fff;
+    }
+}
+    .pageHeader li a:hover{
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,90 @@
+body{
+	margin: 0px; 
+	background-color: #d2f3fa; 
+	background-image: url("../img/wonders.jpg"); 
+	font-family: Monospace, Sans-serif;
+	}
+	
+input {
+	height: 24px; 
+	border-radius: 2px; 
+	border: 1px solid #D5D5D5;
+	}
+	
+button {
+	height: 30px; 
+	min-width: 65px; 
+	background-image: url("../img/button_sprites.png"); 
+	border: 1px solid #BEF2FA; 
+	border-radius: 2px; 
+	border-style: outset;
+	} 
+	
+.pageHeader{
+	width: 100%; 
+	height: 65px; 
+	background-color: #fff; 
+	border-bottom: 1px solid rgba(0,0,0,0.15); 
+	position: fixed; 
+	box-shadow: 0px 1px 3px #D5D5D5; 
+	z-index: 20;
+	}
+
+.pageHeader .loginBar{
+	float: right; 
+	padding: 15px 60px;
+	}
+
+.pageHeader .loginBar input{
+	width: 200px; 
+	padding-left: 10px;
+	}
+	
+.logo{
+	position: absolute; 
+	padding: 5px 60px;
+	}
+	
+.pageMainContent{
+	height: 1500px; 
+	padding: 75px 60px;
+	}
+
+.pageMainContent .registrationContent{
+	display: none;
+	background-color: #F5F5F5; 
+	padding: 10px; 
+	margin-top: 100px; 
+	width:250px; 
+	border:1px solid #D5D5D5; 
+	border-radius: 3px; 
+	box-shadow: 1px 1px 3px #D5D5D5; 
+	position: fixed; 
+	right: 60px; top: 50px; 
+	z-index: 15;
+	}
+
+.pageMainContent .registrationContent input{
+	width: 235px; 
+	display: block; 
+	margin: 10px 0px; 
+	padding-left: 10px;
+	}
+
+.pageMainContent .registrationContent #registrationButton{
+	float: right;
+	}
+
+.header2{
+	margin: 0px 0px 10px;
+	}
+	
+.inlineBold{
+	font-weight: bold;
+	}
+	
+#map-canvas { 
+	height: 750px; 
+	width: 1000px; 
+	z-index: 10;
+	}

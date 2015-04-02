@@ -1,107 +1,166 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-	<title>SOHO Vascular Surgery</title>
-	<link rel="stylesheet" href="style/css/style.css"/>
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<title>Welcome</title>
+	<link rel="stylesheet" href="css/start.css"/>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var vid = document.getElementById("homeVideo");
+            alert(vid);
+            vid.addEventListener("ended", function(){
+                alert(vid.ended);
+
+                /*var parentNode = document.getElementById('top');
+
+                 var hImg=document.createElement("img");
+                 hImg.setAttribute('src', 'img/slogan.jpg');
+                 hImg.setAttribute('alt', 'nyc');
+
+                 alert(parentNode+" "+ hImg);
+                 parentNode.removeChild(parentNode.firstChild);
+                 parentNode.appendChild(hImg);*/
+            })
+        });
+    </script>
 </head>
-<body ng-app="myApp">
-    <header scroll ng-class="{headerChange:isChange}">
+<body>
+    <div ng-app="myApp" scroll ng-class="{headerChange:isChange}">
         <div class="pageHeader headerChange navbar" role="navigation">
-            <div class="navbar-header">
-                <div class="navbar-brand" id="brand">
-                    SOHO VASCULAR SURGERY
-                </div>
-            </div>
             <div class="headerContainer container">
+                <div class="navbar-header">
+                    <div class="navbar-brand" id="brand">
+                        <img src="img/eliway.png">
+                    </div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerTabs">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
                 <div class="headerTabs navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="">
-                            <a href="#">Home</a>
+                            <a href="#">MISSION</a>
                         </li>
                         <li class="">
-                            <a href="#">About Us</a>
+                            <a href="#">COMMUNITY</a>
                         </li>
                         <li class="">
-                            <a href="#">Our Services</a>
+                            <a href="#">ABOUT US</a>
                         </li>
                         <li class="">
-                            <a href="#">Physician Resources</a>
+                            <a href="#">CONTACT</a>
                         </li>
                         <li class="">
-                            <a href="#">Patient Resources</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Why SOHO?</a>
-                        </li>
-                        <li class="">
-                            <a href="#">Contact Us</a>
+                            <a href="#">SUPPORT</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </header>
-	<div class="pageMainContent">
-        <section class="heroText">
-            <h3>WELCOME TO SOHO VASCULAR SURGERY</h3>
-            <h4 class="slogan">A Premiere Vascular Care Outpatient Facility</h4>
-            <div class="heroDescription">
-            SOHO Vascular Surgery is conveniently located at 123 Lafayette St in Manhattan. We are an independent vascular surgery facility. Our operating rooms are accredited by AAAASF to perform office based surgeries. We specialize in a variety of vascular care procedures including hemodialysis fistula access,maintenance and repair. Permacath insertion, replacement and removal. Laser ablation of varicose veins; as well as ultrasound vascular studies.</div>
-        </section>
-        <section class="carousel" id="top">
-            <div ng-controller="homeCarousel">
-                <div id="carouselPosition">
-                     <carousel class="carousel" interval="myInterval">
-                         <slide ng-repeat="slide in slides" active="slide.active">
-                             <img class="carousel-inner" ng-src="{{slide.image}}">
-                             <!-- <div class="carousel-caption">
-                                 <p>{{slide.name}}</p>
-                             </div> -->
-                         </slide>
-                     </carousel>
-                 </div>
-            </div>
-        </section>
-        <section class="aboutUs">
-            <h3>OUR MISSION</h3>
-            <div>Our goal is providing an ambient, efficient and high standard outpatient service
-            for dialysis patients to reduce stress and improve life quality<div>
-
-            <h3>OUR TEAM</h3>
-            <h4>Medical Director &#38; Chief Surgeon &#8211; Feng QIn</h4>
-
-            Feng Qin, MD, is a vascular and endovascular surgeon. Trained at St Vincent&#8217;s Catholic Medical Center Manhattan,University of South Alabama and North Shore&#8211;Long Island Jewish. He is affiliated with Lenox Hill Hospital, Beth Israel Hospital and St John&#8217;s Episcopal Hospital.
-
-            <h4>Clinical Manager &#8211; Jon Mazzeo</h4>
-
-            Jon Mazzeo, BCLS, ACLS, NYSNA, CCRN, is the Clinical Manager for Soho Vascular Surgery. Jon joined SVS in 2012 and brings 40 years of outstanding clinical service with her. Jon is responsible for facilitating the needs of all of our patients during their visit to the facility. In addition, Jon manages the Soho Clinical Team which includes all medical assistants,licensed independent practitioners ,radiologic technologists and registered nurses.
-        </section>
-        <section class="imgDivider" ng-controller='imageLoader'>
-            <div ng-repeat="img in missionImgs">
-                <img ng-src="{{img}}">
-            </div>
-        </section>
-        <section>
-            <div>
-                <img src="style/img/ASF.png">
-            </div>
-        </section>
     </div>
-    <footer ng-controller="footerCtrl">
-        <div>
-            <ul>
-                <li ng-repeat="nav in footerNavs"><a href="#">{{nav}}</a></li>
-            </ul>
+	<div class="pageMainContent">
+        <div class="homeImg" id="top">
+            <video id="homeVideo" width="100%" height="auto" muted autoplay>
+                <source src="video/Attack.mp4">
+            </video>
         </div>
-        <div>
-            SOHO Vascular Surgery  •  212-966-0033  •  123 Lafayette Street, 6th Floor, New York, New York 11691
-            Copyright &#169; 2015. Soho Vascular Surgery. All rights reserved.
+        <div class="productMemo container">
+            <div class="memoContainer row">
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
+                    <img src="img/brand.png" alt="brand">
+                    <h2>Brand Awareness</h2>
+                    <div>
+                        We help you establish your online presence with a personalized website that sets you apart from others.
+                    </div>
+                </div>
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
+                    <img src="img/management.png" alt="management">
+                    <h2>School Management</h2>
+                    <div>
+                        No more messy record keeping. We help you manage efficiently, so you can focus on education.
+                    </div>
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
+                    <img src="img/data.png" alt="data">
+                    <h2>Advanced Data Analytics</h2>
+                    <div>
+                        Understanding your student is key in helping them achieve their goals.
+                        We provide the best analytic tool for you to gauge student’s performance.
+                    </div>
+                </div>
+
+                <div class="memoSection col-xs-12 col-sm-6 col-md-3">
+                    <img src="img/conn.png" alt="social">
+                    <h2>School Social Platform</h2>
+                    <div>
+                        Education opens minds. Technology connects them. We bring you the best of both, all in one place.
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+        <hr/>
+        <div class="missionContent container">
+            <div class="row">
+                <div class="statement col-xs-12 col-sm-6" id="missionNavigation">
+                    <h2>Our Mission</h2>
+                    <div>EliWay was founded with a vision to provide the best platform solution for schools to stay connected with students.
+                        Our user-friendly platform encourages student and teacher interaction,
+                        making sure that students are on track to achieve their academic goals.
+                    </div>
+                </div>
+                <div class="statement col-xs-12 col-sm-6">
+                    <img src="img/mission.png" alt="mission" width="270" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="lastHR"/>
+    <div class="glossary">
+        <div class="container">
+            <div class="row">
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                        <div><a>About Us</a></div>
+                        <div><a>Our Mission</a></div>
+                        <div><a>Our Solution</a></div>
+                        <div><a>EliWay Membership</a></div>
+                </div>
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                    Contact:
+                    <div>
+                        Phone: 888-8EliWay
+                    </div>
+                </div>
+                <div class="glossaryLinks col-xs-12 col-md-4">
+                    Location
+                </div>
+            </div>
+        </div>
+        <div class="glossaryBottom">
+            <img src="img/greyLogo.png" alt="logo">
+            <div>123 456 Street, New York N.Y 10000</div>
+        </div>
+    </div>
+	<div class="pageFooter">
+        <div class="footerContainer container" id="contactNavigation">
+            <div class="row">
+                <div class="legals col-xs-12 col-sm-3">
+                    &#169; 2014 EliWay, Inc.
+                    <div class="privacy"><a href="#">Privacy</a> | <a href="#">Terms</a></div>
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                <div class="navigation col-xs-12 col-sm-3">
+                    <a href="#top">Back to top</a>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script src="util/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="util/main.js"></script>
     <!--[if lt IE 9]>
